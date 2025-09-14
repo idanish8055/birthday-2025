@@ -1,4 +1,8 @@
-@import url('https://fonts.cdnfonts.com/css/breathing');
+@import url('https://fonts.googleapis.com/css?family=Concert+One|Pacifico');
+:root{
+	--bg-color: #f9d5c3;
+	--bg-color-light: #f9d5c8;
+}
 body {
 	/*background-color: #FFDAB9;	*/
 	background-color: #000;
@@ -13,8 +17,11 @@ body {
 	display: none;
 }
 .peach {
-	/* background-color: #FFDAB9; */
-	background-color: #a8d8d1;	
+	background-color: var(--bg-color);
+	/* background-color: var(--bg-color);	 */
+}
+.light-green{
+	background-color: #a4d6d1 !important;
 }
 .peach-after {
 	-webkit-animation:peach_alive linear 8s infinite;
@@ -26,90 +33,90 @@ body {
 
 @-webkit-keyframes peach_alive {
 	0%{
-		background-color: #a8d8d1;
+		background-color: var(--bg-color);
 	}
 	25%{
-		background-color: #a8d8d8;
+		background-color: var(--bg-color-light);
 	}
 	50%{
-		background-color: #a8d8d1;
+		background-color: var(--bg-color);
 	}
 	75%{
-		background-color: #a8d8d8;
+		background-color: var(--bg-color-light);
 	}
 	100%{
-		background-color: #a8d8d1;
+		background-color: var(--bg-color);
 	}
 }
 @-moz-keyframes peach_alive {
 	0%{
-		background-color: #a8d8d1;
+		background-color: var(--bg-color);
 	}
 	25%{
-		background-color: #a8d8d8;
+		background-color: var(--bg-color-light);
 	}
 	50%{
-		background-color: #a8d8d1;
+		background-color: var(--bg-color);
 	}
 	75%{
-		background-color: #a8d8d8;
+		background-color: var(--bg-color-light);
 	}
 	100%{
-		background-color: #a8d8d1;
+		background-color: var(--bg-color);
 	}
 }
 
 @-o-keyframes peach_alive {
 	0%{
-		background-color: #a8d8d1;
+		background-color: var(--bg-color);
 	}
 	25%{
-		background-color: #a8d8d8;
+		background-color: var(--bg-color-light);
 	}
 	50%{
-		background-color: #a8d8d1;
+		background-color: var(--bg-color);
 	}
 	75%{
-		background-color: #a8d8d8;
+		background-color: var(--bg-color-light);
 	}
 	100%{
-		background-color: #a8d8d1;
+		background-color: var(--bg-color);
 	}
 }
 
 @-ms-keyframes peach_alive {
 	0%{
-		background-color: #a8d8d1;
+		background-color: var(--bg-color);
 	}
 	25%{
-		background-color: #a8d8d8;
+		background-color: var(--bg-color-light);
 	}
 	50%{
-		background-color: #a8d8d1;
+		background-color: var(--bg-color);
 	}
 	75%{
-		background-color: #a8d8d8;
+		background-color: var(--bg-color-light);
 	}
 	100%{
-		background-color: #a8d8d1;
+		background-color: var(--bg-color);
 	}
 }
 
 @keyframes peach_alive {
 	0%{
-		background-color: #a8d8d1;
+		background-color: var(--bg-color);
 	}
 	25%{
-		background-color: #a8d8d8;
+		background-color: var(--bg-color-light);
 	}
 	50%{
-		background-color: #a8d8d1;
+		background-color: var(--bg-color);
 	}
 	75%{
-		background-color: #a8d8d8;
+		background-color: var(--bg-color-light);
 	}
 	100%{
-		background-color: #a8d8d1;
+		background-color: var(--bg-color);
 	}
 }
 
@@ -1267,7 +1274,7 @@ audio {
 	bottom: 0;
 	padding:10px 0px 10px 0px;
 }
-#play, #bannar_coming, #balloons_flying,#cake_fadein,#light_candle,#wish_message,#story {
+#play, #bannar_coming, #balloons_flying,#cake_fadein,#light_candle,#wish_message,#story,#thank_you {
 	display: none;
 }
 
@@ -1281,9 +1288,13 @@ audio {
 .message p {
 	font-family: 'Cookie', cursive;
 	font-size: 14px;
-	color: #000;
+	color: #84482b;
 	display: none;
 	font-weight: bold;
+}
+.message p.para-big{
+	font-size: 30px;
+    font-weight: 700;
 }
 
 .btn-primary {
@@ -1293,7 +1304,7 @@ audio {
 	font-family: 'Signika', sans-serif;
 	font-weight: 700;
 	color: #fff;
-	background-color: #F25E86;
+	background-color: #84482b;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -1302,7 +1313,7 @@ audio {
 .open .dropdown-toggle.btn-primary {
 	border-color: #fff;
 	color: #fff;
-	background-color: #F25E86;
+	background-color: #84482b;
 }
 /* Password form */
 .password-form{
@@ -1424,15 +1435,31 @@ audio {
 	padding: 4rem 0;
 }
 .banner-man-wrapper h2{
-	font-family: 'Breathing', sans-serif;
+	font-family: "Pacifico",cursive;
 	font-size: 40px;
+	color: #84482b;
+
 }
 .banner-man-wrapper h3{
-	font-family: 'Breathing', sans-serif;
+	font-family: "Pacifico",cursive;
 	font-size: 28px;
+	color: #84482b;
 }
+.recap h2{
+	font-family: "Pacifico",cursive;
+	color: #84482b;
+}
+.recap p{
+	font-family: "Pacifico",cursive;
+	color: #84482b;
+	letter-spacing: 1px;
+}
+video, img{
+	border-radius: 10px;
+}
+
 .btn{
-	background-color: #F25E86;
+	background-color: #84482b;
 	color: #fff;
 	border-color: #fff;
 }

@@ -57,6 +57,8 @@ $('document').ready(function(){
 	});
 
 	$('#bannar_coming').click(function(){
+		ribbonCelebration();
+		$('body').addClass('light-green');
 		$('.banner-container').fadeIn('slow');
 		$('.banner-man-wrapper').fadeOut('fast').promise().done(function(){
 			$('.message').fadeIn('slow');
@@ -185,20 +187,31 @@ $('document').ready(function(){
 	});
 	
 	$('#story').click(function(){
+		var audio = document.querySelectorAll('.song')[0];
+        audio.pause();
+		var audio2 = document.querySelectorAll('.song2')[0];
+        	audio2.play();
 		// window.scrollBy(0, window.innerHeight+100);
 		$('.banner-container').fadeOut('slow');
 		window.scrollTo(0, document.body.scrollHeight);
-		$(this).fadeOut('slow');
+		$(this).fadeOut('slow').delay(0).promise().done(function(){
+			$('body').removeClass('light-green');
+		});
 		
 		var i;
 
 		function msgLoop (i) {
 			window.scrollTo(0, document.body.scrollHeight);
-			$("p:nth-child("+i+")").fadeIn('slow').delay(800).promise().done(function(){
+			$(".message p:nth-child("+i+")").fadeIn('slow').delay(800).promise().done(function(){
 				i=i+1;
-				$("p:nth-child("+i+")").fadeIn('slow').delay(1000);
+				$(".message p:nth-child("+i+")").fadeIn('slow').delay(1000);
 				if(i==50){
 					$("p:nth-child(49)").fadeIn('slow').promise().done(function () {
+						
+						$('.message').fadeOut('slow').delay(800).promise().done(function(){
+							$('#thank_you').fadeIn('slow').delay(5000);
+							$('.recap').fadeIn();
+						});
 					});
 					
 				}
@@ -212,6 +225,17 @@ $('document').ready(function(){
 		
 		msgLoop(0);
 		
+	});
+
+	$('#thank_you').click(function(){
+		$(this).fadeOut('slow');
+		$('.recap').fadeOut('slow').delay(800).promise().done(function(){
+			$(".thankyou").fadeIn();
+			setTimeout(()=>{
+				var audio2 = document.querySelectorAll('.song2')[0];
+        		audio2.pause();
+			}, 6000);
+		});
 	});
 
 	// Password
@@ -268,7 +292,7 @@ $('document').ready(function(){
 
 // Ribbon celebration
 function ribbonCelebration(){
-    const end = Date.now() + 30 * 1000;
+    const end = Date.now() + 5 * 1000;
 
     // go Buckeyes!
     const colors = ["#bb0000", "#ffffff", "#FFFF00"];
@@ -308,7 +332,7 @@ function ribbonCelebration(){
 		yyyy = today.getFullYear(),
 		nextYear = yyyy + 1,
 		dayMonth = "09/20/",
-		birthday = dayMonth + yyyy;
+		birthday = dayMonth + 2025;
 		
 	today = mm + "/" + dd + "/" + yyyy;
 	// if (today > birthday) {
