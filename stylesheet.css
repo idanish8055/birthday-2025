@@ -1,3 +1,4 @@
+@import url('https://fonts.cdnfonts.com/css/breathing');
 body {
 	/*background-color: #FFDAB9;	*/
 	background-color: #000;
@@ -1270,8 +1271,8 @@ audio {
 	display: none;
 }
 
-.cake-cover {
-	margin-top: 50px;
+.cake {
+	margin-bottom: 50px;
 }
 .message {
 	margin-top: 50px;
@@ -1286,13 +1287,13 @@ audio {
 }
 
 .btn-primary {
-        border-color: #466baf;
-        padding: 10px;
-        text-transform: uppercase;
-        font-family: 'Signika', sans-serif;
-        font-weight: 700;
-        color: #fff;
-        background-color: #466baf;
+	border-color: #466baf;
+	padding: 10px;
+	text-transform: uppercase;
+	font-family: 'Signika', sans-serif;
+	font-weight: 700;
+	color: #fff;
+	background-color: #466baf;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -1342,6 +1343,12 @@ audio {
     color: white;
     font-style: italic;
     margin: 2rem 3rem;
+}
+.password-form .error {
+    font-size: 12px;
+    color: red;
+    font-style: italic;
+    padding: 12px;
 }
 /* Timer */
 
@@ -1400,4 +1407,32 @@ audio {
   .timer li span {
     font-size: calc(3.375rem * .75);
   }
+}
+.firework-wrapper{
+	position: relative;
+}
+.banner-man-wrapper{
+	position: relative;
+    margin-bottom: 8rem;
+}
+.banner-man-wrapper .bannar{
+	position: relative;
+	right: -38px;
+}
+.banner-man-wrapper .text{
+	text-align: center;
+	padding: 4rem 0;
+}
+.banner-man-wrapper h2{
+	font-family: 'Breathing', sans-serif;
+	font-size: 40px;
+}
+.banner-man-wrapper h3{
+	font-family: 'Breathing', sans-serif;
+	font-size: 28px;
+}
+.btn{
+	background-color: #F25E86;
+	color: #fff;
+	border-color: #fff;
 }

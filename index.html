@@ -15,6 +15,8 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+	 <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js" crossorigin="anonymous"></script>
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	<link rel="stylesheet" type="text/css" href="loading.css">
@@ -27,7 +29,7 @@
 <body>
 	<div class="loading"></div>
 	<audio class="song" controls loop>
-        <source src="hbd.mp3"></source>
+        <source src="song.mp3"></source>
 	   Your browser isn't invited for super fun audio time.
     </audio>
     <div class="balloons text-center" id="b1">
@@ -54,7 +56,6 @@
 
     <img src="Balloon-Border.png" width="100%" class="balloon-border">
  
-
 	<div class="container">
 		<div class="row password-form" >
 			<div class="prompt">
@@ -67,6 +68,9 @@
 				<input type="text" id="digit-3" name="digit-3" data-next="digit-4" data-previous="digit-2" />
 				<input type="text" id="digit-4" name="digit-4" data-previous="digit-3" />
 			</form>
+			<div class="error" style="display:none;">
+				*Hehe as expected 🤣
+			</div>
 		</div>
 		<div class="row timer" style="display: none;">
 			<h1 id="headline">Getting closer to your birthday celebration!🥳</h1>
@@ -99,86 +103,77 @@
 				<div class="bulb" id="bulb_orange"></div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-12 text-center banner-container">
+		<div class="row banner-container" style="display:none;">
+			<div class="col-md-12 text-center">
 				<img src="banner.png" class="bannar">
 				<video autoplay muted>
 					<source src="video-card.mp4" type="video/mp4">
 				</video>
 			</div>
 		</div>
-		
+		<div class="row banner-man-wrapper" style="display:none;">
+			<div class="col-sm-2 text" bis_skin_checked="1">
+				<h2>Happy Birthday</h2>
+				<h3>Muskan Dwivedi</h3>
+			</div>
+			<img src="cartoon-man-bday.png" class="bannar banner-man">
+		</div>
 		<div class="row cake-cover">
 			<div class="col-md-12 texr-center">
 				<div class="cake">
-				  <div class="velas">
-				    <div class="fuego"></div>
-				    <div class="fuego"></div>
-				    <div class="fuego"></div>
-				    <div class="fuego"></div>
-				    <div class="fuego"></div>
-				  </div>
-				  <div class="cobertura"></div>
-				  <div class="bizcocho"></div>
+					<div class="velas">
+						<div class="fuego"></div>
+						<div class="fuego"></div>
+						<div class="fuego"></div>
+						<div class="fuego"></div>
+						<div class="fuego"></div>
+					</div>
+					<div class="cobertura"></div>
+					<div class="bizcocho"></div>
 				</div>
 			</div>
 		</div>
 		<div class="row message">
 			<div class="col-md-12">
-				<p>Today is...</p>
-				<p>as beautiful as other days</p>
-				<p>but you realize</p>
-				<p>another year has gone</p>
-				<p>in a blink of the eyes</p>
-				<p><strong>however</strong></p>
-				<p>Do you know..?</p>
-				<p>today is just special</p>
-				<p>so special to you</p>
-				<p>that's why</p>
-				<p>Let's make it...</p>
-				<p>the best celebration ever</p>
-				<p>and let me share...</p>
-				<p>a piece of happiness to you</p>
-				<p>I made all this...</p>
-				<p>as a birthday present to you</p>
-				<p>thanks for being there</p>
-				<p>thanks for the friendship we made</p>
-				<p>thanks for everything</p>
-				<p>I wish you all the best</p>
-				<p>May your life be at ease</p>
-				<p>May all your wishes come true</p>
-				<p>Remember</p>
-				<p>your ambitions</p>
-				<p>you live as a free bird...</p>
-				<p>flying in the blue sky</p>
-				<p>Now things are different...</p>
-				<p>real story of your life</p>
-				<p>is just about to begin</p>
-				<p>indeed..</p>
-				<p>but...</p>
-				<p>don't worry</p>
-				<p>because...</p>
-				<p>God has your back</p>
-				<p>and</p>
-				<p>this year will be better</p>
-				<p>and I hope</p>
-				<p>you'll find...</p>
-				<p>happiness along the way</p>
-				<p>keep your spirit up</p>
-				<p>enjoy every single moment...</p>
-				<p>that you experience today</p>
-				<p>fill it with your most beautiful smile</p>
-				<p>and make it the best memory..</p>
-				<p>lastly...</p>
-				<p>I'd like to wish you one more time</p>
-				<p>a very happy birthday Muskan Dwivedi 🎉</p>
+				<p>Today is not just another day...</p>
+				<p>It's the day the universe smiled...</p>
+				<p>Because someone extraordinary was born 😂</p>
+				<p>Another year has passed, but my love...</p>
+				<p class="heart">...my love for you grows stronger each day ❤️</p>
+				<p><strong>My Muskan...</strong></p>
+				<p>Do you feel it?</p>
+				<p>This day shines differently</p>
+				<p>because it belongs to you</p>
+				<p>Let’s make this birthday unforgettable</p>
+				<p>with love, laughter, and a sprinkle of magic</p>
+				<p>Everything I’ve done here...</p>
+				<p>Is just a small reflection of how much I love you</p>
+				<p>You know how much I love you?</p>
+				<p class="heart">More than burgir. And that says A LOT! 🍕🍔😂</p>
+				<p>Thanks for being my light, my calm, my chaos and my cuddle bug 😘</p>
+				<p>I wish you every happiness this world can offer</p>
+				<p>And more... because you deserve everything</p>
+				<p>Remember your dreams</p>
+				<p>You're meant to soar...</p>
+				<p>Like a bird chasing sunsets</p>
+				<p>But even birds fall in love sometimes... and I fell hard for you 😍</p>
+				<p>I’ll always be here</p>
+				<p>Through ups, downs, bad hair days, and your mood swings ofcourse 😅</p>
+				<p>And I hope...</p>
+				<p>You find love in every moment, especially with me 😄</p>
+				<p>Laugh at all the silly moments</p>
+				<p>Let this birthday be a memory we both cherish forever</p>
+				<p>And just before I wrap this up...</p>
+				<p>I need to tell you again</p>
+				<p class="heart">I love you endlessly, Muskan Dwivedi ❤️</p>
+				<p>Happy Birthday🎉🎂, My Queen👑</p>
 			</div>
 		</div>
 		<div class="navbar navbar-fixed-bottom" style="display:none;">
 			<div class="row">
 				<div class="col-md-6 text-center col-md-offset-3">
 					<button class="btn btn-primary" id="turn_on">Turn On Lights</button>
-					<button class="btn btn-primary" id="play">Play Music</button>
+					<!-- <button class="btn btn-primary" id="play">Play Music</button> -->
 					<button class="btn btn-primary" id="bannar_coming">Here we go</button>
 					<!-- <button class="btn btn-primary" id="balloons_flying">Fireworks?</button> -->
 					<!-- <button class="btn btn-primary" id="cake_fadein">Most Delicious Cake Ever</button>
