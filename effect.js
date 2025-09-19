@@ -271,7 +271,8 @@ $('document').ready(function(){
 						$(next).select();
 					} else {
 						if(date === '2009'){
-							document.querySelector('.timer').style.display = "block";
+							document.querySelector('.navbar').style.display = 'block';
+
 							document.querySelector('.password-form').style.display = "none";
 						}
 						else{
@@ -279,7 +280,6 @@ $('document').ready(function(){
 						}
 					}
 				}
-				
 			}
 			else{
 				this.value = this.value.replace(/[^0-9]/g, '');
@@ -340,11 +340,14 @@ function ribbonCelebration(){
 	// }
 	//end
 	
-  	const countDown = new Date(birthday).getTime(),
-    x = setInterval(function() {    
+  	let countDown = new Date(birthday).getTime();
+	countDown = countDown - (6352000);
+		
+	console.log(new Date(countDown), '10PM', new Date(new Date().getTime()));
 
+    let x = setInterval(function() {    
         const now = new Date().getTime(),
-              distance = countDown - now;
+            distance = countDown - now;
 
         document.getElementById("days").innerText = Math.floor(distance / (day)) < 10 ? '0'+Math.floor(distance / (day)) : Math.floor(distance / (day)),
         document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)) < 10 ? '0'+Math.floor((distance % (day)) / (hour)) : Math.floor((distance % (day)) / (hour)),
@@ -353,7 +356,9 @@ function ribbonCelebration(){
 
         //do something later when date is reached
         if (distance < 0) {
-			document.querySelector('.navbar').style.display = 'block';
+			document.querySelector('.password-form').style.display = "block";
+			document.querySelector('.timer').style.display = "none";
+
           	clearInterval(x);
         }
         //seconds
