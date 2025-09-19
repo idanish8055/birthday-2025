@@ -341,9 +341,8 @@ function ribbonCelebration(){
 	//end
 	
   	let countDown = new Date(birthday).getTime();
-	countDown = countDown - (6352000);
 		
-	console.log(new Date(countDown), '10PM', new Date(new Date().getTime()));
+	// console.log(new Date(countDown), '10PM', new Date(new Date().getTime()));
 
     let x = setInterval(function() {    
         const now = new Date().getTime(),
